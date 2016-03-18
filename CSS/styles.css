@@ -1,0 +1,92 @@
+img{
+	max-width: 100%;
+	margin: auto;
+}
+#mg-wrapper{
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
+}
+#mg-contents{
+	position: relative;
+}
+#button-bucket, h1{
+	text-align: center;
+	margin: auto;
+	padding: 2%
+}
+#button-bucket .diff{
+	font-size: 60px;
+	border-radius: 20px;
+}
+.counter, .diff{
+	text-align: center;
+	outline: 0;
+	cursor: pointer;
+}
+#easy{
+	background-color: green;
+}
+#med{
+	background-color: yellow;
+}
+#hard{
+	background-color: red;
+}
+.mg-tile{
+	height: 200px;
+	padding: 5px;
+	box-sizing: border-box;
+	float: left;
+	perspective: 500px;
+}
+.easy .mg-tile, .med .mg-tile{
+	width: 20%;
+}
+.hard .mg-tile{
+	width: 14.28%;
+}
+.mg-tile-inner{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform .3s;
+
+}
+.mg-tile-outside, .mg-tile-inside{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 0 1px #787a80;
+	backface-visibility: hidden;
+}
+.mg-tile-outside{
+	background: url("../img/logo-bw.png") 50% 50% no-repeat;
+	background-color: #dcdee1;
+}
+.mg-tile-inside{
+	background-color: #f8fafc;
+	transform: rotateY(180deg);
+}
+.unmatched{
+
+}
+.flipped{
+	transform: rotateY(-180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
