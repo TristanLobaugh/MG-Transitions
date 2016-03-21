@@ -80,6 +80,9 @@ $(document).ready(function(){
 				if($(".flipped.matched").length == gridArray.length){
 					alert("all matched");
 					wins++
+					playAgain();
+				}else if(moves == 0)	{
+					endGame();
 				}
 
 			}else{
@@ -92,8 +95,16 @@ $(document).ready(function(){
 
 	});
 
+function playAgain()	{
+	//lock all buttons
+	//ask player if they want to play again
+	//if so reset the board and unlock the buttons.
+}
 
-
+function endGame()	{
+	//put message here that player has run out of turns and lost
+	playAgain();
+}
 
 
 
