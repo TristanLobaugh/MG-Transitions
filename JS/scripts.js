@@ -16,6 +16,9 @@ $(document).ready(function(){
 		"<img src='img/monsters-13.png'>",
 		"<img src='img/monsters-14.png'>",
 		"<img src='img/monsters-15.png'>",
+		"<img src='img/monsters-01.png'>",
+		"<img src='img/monsters-02.png'>",
+		"<img src='img/monsters-03.png'>",
 	];
 	var gridSize;
 	var gameTiles;
@@ -25,17 +28,23 @@ $(document).ready(function(){
 	$("input").click(function(){
 		var dif = $(this).val();
 		if(dif == "easy"){
+			moves = 10;
 			rowSize = 5;
 			gridSize = rowSize * 2;
+			$("#mg-wrapper").addClass("easy");
 		}else if(dif == "med"){
+			moves = 20;
 			rowSize = 5;
 			gridSize = rowSize * 4;
+			$("#mg-wrapper").addClass("med");
 		}else if(dif == "hard"){
-			rowSize = 7;
-			gridSize = rowSize * 4;
+			moves = 30;
+			rowSize = 6;
+			gridSize = rowSize * 5;
 			$("#mg-wrapper").addClass("hard");
 		}
 		$("#button-bucket").toggle();
+		$("#move-counter").html(moves);
 		gameTiles = cards.slice(0,(gridSize/2));
 		gridArray = $.merge(gameTiles, gameTiles);
 
@@ -58,7 +67,7 @@ $(document).ready(function(){
 		$(".mg-tile").click(function(){
 			$(this).find(".mg-tile-inner").addClass("flipped");
 			if($(".flipped.unmatched").length == 2){
-				moves++;
+				moves--;
 				var visibleCards = $(".flipped.unmatched img")
 				if(visibleCards[0].src == visibleCards[1].src){
 					$(".flipped.unmatched").addClass("matched");

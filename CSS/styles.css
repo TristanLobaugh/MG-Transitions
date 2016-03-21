@@ -16,13 +16,13 @@ img{
 	padding: 2%
 }
 #button-bucket .diff{
-	font-size: 60px;
+	font-size: 40px;
 	border-radius: 20px;
+	cursor: pointer;
 }
 .counter, .diff{
 	text-align: center;
 	outline: 0;
-	cursor: pointer;
 }
 #easy{
 	background-color: green;
@@ -32,6 +32,13 @@ img{
 }
 #hard{
 	background-color: red;
+}
+.counter{
+	font-size: 20px;
+	background-color: blue;
+	color: white;
+	border-radius: 20px;
+	padding: 5px;
 }
 .mg-tile{
 	height: 200px;
@@ -44,7 +51,7 @@ img{
 	width: 20%;
 }
 .hard .mg-tile{
-	width: 14.28%;
+	width: 16.66%;
 }
 .mg-tile-inner{
 	width: 100%;

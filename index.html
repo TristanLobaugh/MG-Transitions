@@ -1,27 +1,31 @@
 <html>
 <head>
 	<title>The Memory Game</title>
-
-		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 <body>
-	<h1>Memory Game</h1>
-	<div id="button-bucket">
-		<input class="diff" id="easy" type="button" value="easy">
-		<input class="diff" id="med" type="button" value="med">
-		<input class="diff" id="hard" type="button" value="hard">
+
+	<div class="container">	
+		<div class="row">
+			<h1 class="head-wrapper col-xs-12 col-sm-12 col-md-12">Memory Game</h1>
+			<div id="button-bucket" class="row">
+				<input class="diff col-xs-4 col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2" id="easy" type="button" value="easy">
+				<input class="diff col-xs-4 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1" id="med" type="button" value="med">
+				<input class="diff col-xs-4 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1" id="hard" type="button" value="hard">
+			</div>
+		</div>
+		<div class="row">
+			<div class="counter col-xs-5 col-sm-3 col-md-2">Moves Left: <span id="move-counter">0</span></div>
+			<div class="counter col-xs-5 col-xs-offset-2 col-sm-3 col-sm-offset-6 col-md-2 col-md-offset-8">Wins: <span id="wins-counter">0</span></div>
+		</div>
+		<div id="mg-wrapper" class="mg-wrapper">
+	        <div id="mg-contents" class="mg-contents">
+	        <!-- Our tiles will go here!!! -->
+	        </div>
+	    </div>
 	</div>
-
-	<div class="counter">Moves: <span id="move-counter">0</span></div>
-	<div class="counter">Wins: <span id="wins-counter">0</span></div>
-
-	<div id="mg-wrapper" class="mg-wrapper">
-        <div id="mg-contents" class="mg-contents">
-        <!-- Our tiles will go here!!! -->
-        </div>
-    </div>
 
 
 
