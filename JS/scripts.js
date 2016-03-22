@@ -49,8 +49,17 @@ $(document).ready(function(){
 		gridArray = $.merge(gameTiles, gameTiles);
 
 		//shuffle here
+		var numberOFTimesToShuffle = 300;
+		for(var k = 1; k < numberOFTimesToShuffle; k++){
+			card1 = Math.floor(Math.random()*gridArray.length);
+			card2 = Math.floor(Math.random()*gridArray.length);
+			if(card1 != card2){
+				temp = gridArray[card1];
+				gridArray[card1] = gridArray[card2];
+				gridArray[card2] = temp;
+			}
+		}
 
-		//place here
 		for(var i = 0; i < gridArray.length; i++){
 			var html = '<div class="mg-tile">';
 					html += '<div class="mg-tile-inner unmatched flipped">';
@@ -62,7 +71,7 @@ $(document).ready(function(){
 		}
 		setTimeout(function(){
 			$('.mg-tile-inner').removeClass("flipped");
-		}, 2000);
+		}, 3000);
 
 		$(".mg-tile").click(function(){
 			$(this).find(".mg-tile-inner").addClass("flipped");
@@ -86,7 +95,7 @@ $(document).ready(function(){
 				}
 
 			}else{
-
+					//only one card is flipped up at this time (this else is just a placeholder)
 			}
 			$("#move-counter").html(moves);
 			$("#wins-counter").html(wins);

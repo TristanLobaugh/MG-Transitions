@@ -60,7 +60,6 @@ img{
 	position: relative;
 	transform-style: preserve-3d;
 	transition: transform .3s;
-
 }
 .mg-tile-outside, .mg-tile-inside{
 	position: absolute;
@@ -78,9 +77,6 @@ img{
 .mg-tile-inside{
 	background-color: #f8fafc;
 	transform: rotateY(180deg);
-}
-.unmatched{
-
 }
 .flipped{
 	transform: rotateY(-180deg);
