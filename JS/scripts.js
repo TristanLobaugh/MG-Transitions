@@ -71,7 +71,7 @@ $(document).ready(function(){
 		}
 		setTimeout(function(){
 			$('.mg-tile-inner').removeClass("flipped");
-		}, 3000);
+		}, 2000);
 
 		$(".mg-tile").click(function(){
 			$(this).find(".mg-tile-inner").addClass("flipped");
